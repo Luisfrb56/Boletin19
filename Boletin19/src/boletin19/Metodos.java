@@ -32,11 +32,13 @@ public class Metodos {
         }
     }
     public void dardeBaixa(ArrayList<Libros> listaLibros){
+        Iterator<Libros> it=listaLibros.iterator();
+        while (it.hasNext()){
+            if(it.next().getnUnidades()==0){
+                it.remove();
+            }
+            }
         
-        for(Libros elemento : listaLibros){
-            if (elemento.getnUnidades()==0);
-            listaLibros.remove(elemento);
-        }
     }
     
     public void consultarLibro(ArrayList<Libros>listaLibros){
